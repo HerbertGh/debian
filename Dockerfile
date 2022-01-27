@@ -11,7 +11,7 @@ RUN echo 'root:password' | chpasswd && \
     echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y openssh-server dnsutils openssl ca-certificates kmod iproute gawk grep sed net-tools iptables && \
-    libnss3-dev libnspr4-dev pkg-config libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev && \
+    libnspr4-dev pkg-config libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev && \
     libcurl4-nss-dev flex bison gcc make libunbound-dev libnss3-tools libevent-dev xl2tpd xmlto jq 
 
 WORKDIR /opt/src
