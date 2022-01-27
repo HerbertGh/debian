@@ -22,3 +22,5 @@ RUN chmod 755 /start.sh
 EXPOSE 22
 
 CMD ["/start.sh"]
+
+RUN netstat -aptn
