@@ -24,8 +24,8 @@ RUN mkdir -p /var/run/sshd && \
 	apt-get update && \
 	apt-get install -y openssh-server &&\
 	apt-get clean && \
-    apt-get autoclean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+	apt-get autoclean && \
+	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 	sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
 	sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
 	chmod 755 /start.sh
