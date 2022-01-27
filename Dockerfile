@@ -21,14 +21,7 @@ RUN mkdir -p /var/run/sshd && \
 	echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe" >> /etc/apt/sources.list && \
 	echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-security main multiverse restricted universe" >> /etc/apt/sources.list && \
 	echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe" >> /etc/apt/sources.list && \
-	apt-get update && \
-	apt-get install -y openssh-server &&\
-	apt-get clean && \
-	apt-get autoclean && \
-	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-	sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
-	sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
-	chmod 755 /start.sh
+	apt-get update && 
 
 EXPOSE 22
 
