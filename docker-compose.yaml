@@ -5,4 +5,5 @@ services:
     ports:
       - "500:500"
       - "4500:4500"
+      - "1701:1701"
     privileged: true
