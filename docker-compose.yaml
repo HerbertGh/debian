@@ -1,7 +1,6 @@
 services:
   ubuntu:
     build: .
-    shm_size: 2.6gb
     ports:
       - "500:500"
       - "4500:4500"
